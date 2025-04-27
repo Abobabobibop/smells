@@ -26,7 +26,7 @@ def transform_index(x, y, N, t):
         return (N - 1 - x) * N + (N - 1 - y)
     else:
         return y * N + x
-
+# CUDA kernel
 # CUDA kernel
 @cuda.jit
 def compress_kernel(img, W, H, N, domX, domY, domCount, out_dx, out_dy, out_t, out_a, out_b):
